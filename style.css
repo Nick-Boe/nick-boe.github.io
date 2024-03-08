@@ -8,10 +8,6 @@ html {
     background-size: cover;
     background-color:black;
   }
-a{
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
 body{
     background: inherit;
     color: white;
@@ -97,6 +93,10 @@ img{
 }
 img:hover{
     transform: scale(1.2);
+}
+a {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 @media (max-width:557px){
     h1{
