@@ -1,0 +1,23 @@
+name: Lint
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    container:
+      image: node:latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install linters
+        run: |
+          npm install -g htmlhint stylelint stylelint-config-standard
+      - name: Setup stylelint config
+        run: echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
+      - name: Run HTMLHint
+        run: htmlhint index.html
+      - name: Run stylelint
+        run: stylelint style.css
