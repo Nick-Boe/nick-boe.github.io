@@ -19,7 +19,6 @@ body{
     margin: 1rem;
     border-radius: 0.5em;
     text-align: center;
-    text-justify: center;
 }
 hr{
     background-color:white;
@@ -54,7 +53,7 @@ h3{
 }
 p{
     font-size: 1em;
-    text-shadow: 1px, 1px, 2px black;
+    text-shadow: 1px 1px 2px black;
     margin:1em 0 0 0;
 }
 footer{
