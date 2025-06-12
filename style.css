@@ -45,7 +45,8 @@ h1{
     white-space: nowrap; /* keep name on one line */
     letter-spacing: 0.05em;
 }
-h1:first-letter{
+.first-name::first-letter,
+.last-name::first-letter{
     font-size:1.3em;
 }
 h1:hover{
