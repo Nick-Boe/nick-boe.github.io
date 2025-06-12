@@ -43,6 +43,8 @@ h1{
     transition-delay: 0.08s;
     display:inline-block;
     padding: 0 0.6rem;
+    white-space: nowrap; /* keep name on one line */
+    letter-spacing: 0.05em;
 }
 h1:first-letter{
     font-size:1.3em;
@@ -105,6 +107,11 @@ a {
     h1{
         font-size:2.5rem;
         padding: 0.5rem;
+    }
+}
+@media (max-width:350px){
+    h1{
+        font-size:2rem;
     }
 }
 @media (max-width:845px){
