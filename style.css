@@ -14,12 +14,11 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .row{
-    background-color:rgb(0,0,0,.75);
+    background-color: rgba(0,0,0,0.75);
     padding: 1rem;
     margin: 1rem;
     border-radius: 0.5em;
     text-align: center;
-    text-justify: center;
 }
 hr{
     background-color:white;
@@ -54,7 +53,7 @@ h3{
 }
 p{
     font-size: 1em;
-    text-shadow: 1px, 1px, 2px black;
+    text-shadow: 1px 1px 2px black;
     margin:1em 0 0 0;
 }
 footer{
@@ -64,7 +63,7 @@ footer{
     position:fixed;
     min-height:10px;
     font-size:0.75em;
-    background-color: rgb(0,0,0,.8);  
+    background-color: rgba(0,0,0,0.8);
     text-align: center;
     padding: 5px;
 }
