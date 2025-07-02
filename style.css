@@ -40,14 +40,14 @@ body::before { content:""; position: fixed; inset:0; background: var(--overlay-c
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   font-weight: 400;
   text-transform: uppercase;
   opacity: 0.85;
