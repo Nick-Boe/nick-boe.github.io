@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31703616-1c3f-4777-94a0-e898a45e6f7f" name="Changes" comment="Updated and fixed Linter YAML">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="31703616-1c3f-4777-94a0-e898a45e6f7f" name="Changes" comment="Updated and fixed Linter YAML" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +71,7 @@
       <workItem from="1751043663960" duration="3259000" />
       <workItem from="1751158696482" duration="12041000" />
       <workItem from="1751600831920" duration="697000" />
-      <workItem from="1752009466473" duration="2398000" />
+      <workItem from="1752009466473" duration="2725000" />
     </task>
     <task id="LOCAL-00001" summary="Updated and fixed Linter YAML">
       <option name="closed" value="true" />
@@ -83,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752011163788</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated and fixed Linter YAML">
+      <option name="closed" value="true" />
+      <created>1752014926304</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752014926304</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
