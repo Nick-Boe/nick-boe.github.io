@@ -103,11 +103,33 @@ footer {
   color: rgba(255, 255, 255, 0.8);
 }
 
+@media (max-width: 768px) {
+  body {
+    display: block;
+    padding: 1rem 0.5rem;
+  }
+
+  .glass-card {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+}
+
 @media (max-width: 576px) {
   h1 {
     font-size: 2.25rem;
   }
   .subtitle {
     font-size: 1rem;
+  }
+  .glass-card {
+    padding: 1rem;
+  }
+  .social-icons img {
+    height: 32px;
+    margin: 0 0.25rem;
+  }
+  footer {
+    margin-top: 1.5rem;
   }
 }
