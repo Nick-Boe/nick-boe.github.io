@@ -1,12 +1,12 @@
 :root {
   --bg-image: url("images/bokehbg.jpg");
   --bg-color: #000;
-  --overlay-color: rgba(0, 0, 0, 0.55);
-  --card-bg: rgba(255, 255, 255, 0.1);
-  --card-border: rgba(255, 255, 255, 0.25);
+  --overlay-color: rgb(0 0 0 / 55%);
+  --card-bg: rgb(255 255 255 / 10%);
+  --card-border: rgb(255 255 255 / 25%);
   --accent-color: lightskyblue;
   --text-color: #fff;
-  --font-main: 'Inter', Arial, sans-serif;
+  --font-main: 'Inter', arial, sans-serif;
 }
 
 /*
@@ -17,6 +17,11 @@
  */
 html {
   font-size: clamp(14px, 1.2vw + 1.2vh, 20px);
+}
+
+/* Ensure padding and borders don't increase element width */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 html, body {
@@ -34,51 +39,58 @@ body {
   align-items: center;
   padding: 1rem;
 }
-body::before { content:""; position: fixed; inset:0; background: var(--overlay-color); z-index:-1; }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-color);
+  z-index: -1;
+}
 
 .glass-card {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 20px rgb(0 0 0 / 60%);
   color: var(--text-color);
   padding: 2rem;
   max-width: 600px;
   width: 100%;
-  max-height: 100vh;
-  overflow-y: auto;
+  height: 100dvh;
+  overflow-y: hidden;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw + 1vh, 3rem);
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 3vw + 0.5vh, 1rem);
   font-weight: 400;
   text-transform: uppercase;
   opacity: 0.85;
+  white-space: nowrap;
 }
 
 .location {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw + 0.5vh, 1rem);
   opacity: 0.75;
   margin-bottom: 1.5rem;
 }
 
 hr {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgb(255 255 255 / 30%);
   margin: 1.5rem auto;
   width: 60%;
 }
 
 .description {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(0 0 0 / 30%);
   padding: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
@@ -112,10 +124,10 @@ footer {
   font-size: 0.875rem;
   text-align: center;
   margin-top: 2rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255 255 255 / 80%);
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   body {
     display: block;
     padding: 1rem 0.5rem;
@@ -127,20 +139,24 @@ footer {
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   h1 {
     font-size: 2.25rem;
   }
+
   .subtitle {
     font-size: 1rem;
   }
+
   .glass-card {
     padding: 1rem;
   }
+
   .social-icons img {
     height: 32px;
     margin: 0 0.25rem;
   }
+
   footer {
     margin-top: 1.5rem;
   }
@@ -148,7 +164,7 @@ footer {
 
 /* Further reduce font sizes on very short screens so all content
    stays within the viewport without scrolling. */
-@media (max-height: 700px) {
+@media (height <= 700px) {
   html {
     font-size: clamp(12px, 1vw + 1vh, 18px);
   }
