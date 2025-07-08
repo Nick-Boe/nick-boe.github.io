@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31703616-1c3f-4777-94a0-e898a45e6f7f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/lint.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/lint.yml" afterDir="false" />
+    <list default="true" id="31703616-1c3f-4777-94a0-e898a45e6f7f" name="Changes" comment="Updated and fixed Linter YAML">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +15,24 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="codex/improve-responsive-design-for-all-resolutions" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Nick-Boe"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Nick-Boe/nick-boe.github.io.git",
+    "accountId": "a74aa013-d518-4e5c-8de2-f9d1b1bcb540"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -62,11 +73,35 @@
       <workItem from="1751043663960" duration="3259000" />
       <workItem from="1751158696482" duration="12041000" />
       <workItem from="1751600831920" duration="697000" />
-      <workItem from="1752009466473" duration="820000" />
+      <workItem from="1752009466473" duration="2398000" />
     </task>
+    <task id="LOCAL-00001" summary="Updated and fixed Linter YAML">
+      <option name="closed" value="true" />
+      <created>1752011163788</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752011163788</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated and fixed Linter YAML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated and fixed Linter YAML" />
   </component>
 </project>
