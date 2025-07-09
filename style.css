@@ -71,7 +71,7 @@ h1 {
 }
 
 .subtitle {
-  font-size: clamp(0.6rem, 2vw + 0.5vh, 1rem);
+  font-size: clamp(0.5rem, 2vw + 0.5vh, .8rem);
   font-weight: 400;
   text-transform: uppercase;
   opacity: 0.85;
@@ -141,7 +141,7 @@ footer {
 }
 
 .subtitle {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 }
 
 @media (max-width: 576px) {
@@ -167,8 +167,6 @@ footer {
   }
 }
 
-/* Further reduce font sizes on very short screens so all content
-   stays within the viewport without scrolling. */
 @media (max-height: 700px) {
   html {
     font-size: clamp(12px, 1vw + 1vh, 18px);
