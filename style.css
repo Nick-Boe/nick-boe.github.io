@@ -20,6 +20,17 @@ html {
   box-sizing: border-box;
 }
 
+::selection {
+  background: rgb(135 206 250 / 35%);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -33,7 +44,9 @@ body {
   font-family: var(--font-main), sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
+
+  /* `safe center` falls back to top-align when content overflows, preventing clipping */
+  align-items: safe center;
 
   /* FIX: allow pages taller than 1 viewport to scroll naturally */
   min-height: 100dvh;
@@ -68,21 +81,28 @@ img {
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgb(0 0 0 / 60%);
+  box-shadow: 0 4px 20px rgb(0 0 0 / 60%), inset 0 1px 0 rgb(255 255 255 / 8%);
   color: var(--text-color);
-
-  /* FIX: avoid fit-content traps, give a sensible responsive box */
   padding: 2rem;
   width: 100%;
-  max-width: min(92vw, 64rem);   /* responsive cap */
-
-  /* FIX: prevent tiny box + allow reasonable vertical scrolling */
-  max-height: min(86dvh, 100%);
-  overflow: auto;
+  max-width: min(92vw, 64rem);
 
   /* Ensure it renders above the overlay */
   position: relative;
   z-index: 1;
+  animation: glass-card-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes glass-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1 {
@@ -96,10 +116,20 @@ h1 {
   font-size: clamp(0.7rem, 2vw + 0.4vh, 0.9rem);
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 0.18em;
   opacity: 0.85;
 
   /* FIX: allow wrapping on narrow devices */
   white-space: normal;
+}
+
+.cta-prompt {
+  font-size: clamp(0.85rem, 1.2vw + 0.4vh, 1rem);
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .location {
@@ -110,52 +140,91 @@ h1 {
 
 hr {
   border: 0;
-  border-top: 1px solid rgb(255 255 255 / 30%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 35%), transparent);
   margin: 1.5rem auto;
   width: min(60%, 30rem);
 }
 
 .description {
-  background-color: rgb(0 0 0 / 30%);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
 
   /* FIX: let text flow naturally in a readable measure */
   width: 100%;
-  max-width: 65ch;
+  max-width: 60ch;
   font-size: clamp(0.85rem, 1vw + 0.6vh, 1rem);
+  line-height: 1.65;
+  opacity: 0.92;
 }
 
 .btn-primary {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.6rem 1.75rem;
+  box-shadow: 0 4px 14px rgb(135 206 250 / 25%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color: #b8e0fb;
+  border-color: #b8e0fb;
   color: #000;
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgb(135 206 250 / 40%);
 }
 
-.social-icons img {
-  height: 40px;
-  margin: 0 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
-  transform: scale(1.2);
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgb(135 206 250 / 30%);
 }
 
 footer {
   font-size: 0.875rem;
   text-align: center;
   margin-top: 2rem;
-  color: rgb(255 255 255 / 80%);
+  color: rgb(255 255 255 / 75%);
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px solid rgb(135 206 250 / 30%);
+  transition: border-color 0.2s ease;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  border-bottom-color: var(--accent-color);
+}
+
+/* stylelint-disable-next-line no-descending-specificity -- footer a and .social-icons a target unrelated elements */
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  color: rgb(255 255 255 / 85%);
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover,
+.social-icons a:focus-visible {
+  color: var(--accent-color);
+  background-color: rgb(255 255 255 / 8%);
+  transform: scale(1.12);
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 /* ===== Responsive tweaks ===== */
@@ -187,9 +256,15 @@ footer {
 
   .glass-card { padding: 1rem; }
 
-  .social-icons img {
-    height: 32px;
+  .social-icons a {
+    width: 38px;
+    height: 38px;
     margin: 0 0.25rem;
+  }
+
+  .social-icons svg {
+    width: 20px;
+    height: 20px;
   }
 
   footer { margin-top: 1.5rem; }
@@ -204,9 +279,7 @@ footer {
 
 @media (min-width: 1024px) {
   .glass-card {
-    /* FIX: keep a sane cap on desktop; avoid fit-content growth */
     max-width: min(80vw, 72ch);
-    max-height: min(88dvh, 100%);
     padding: 3rem;
   }
 }
