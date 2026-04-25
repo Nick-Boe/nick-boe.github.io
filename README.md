@@ -13,6 +13,6 @@ To publish this site with GitHub Pages:
 
 1. Push the repository to GitHub.
 2. On GitHub, open the repository's **Settings** and navigate to **Pages**.
-3. Under **Source**, choose the `main` branch and the root (`/`) folder.
+3. Under **Source**, choose the `master` branch and the root (`/`) folder.
 4. Save the settings and visit the URL provided by GitHub once the deployment finishes.
 
