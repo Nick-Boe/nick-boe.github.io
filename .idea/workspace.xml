@@ -19,18 +19,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Nick-Boe"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nick-Boe&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Nick-Boe/nick-boe.github.io.git",
-    "accountId": "a74aa013-d518-4e5c-8de2-f9d1b1bcb540"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Nick-Boe/nick-boe.github.io.git&quot;,
+    &quot;accountId&quot;: &quot;a74aa013-d518-4e5c-8de2-f9d1b1bcb540&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -72,6 +72,8 @@
       <workItem from="1751158696482" duration="12041000" />
       <workItem from="1751600831920" duration="697000" />
       <workItem from="1752009466473" duration="2725000" />
+      <workItem from="1765421027026" duration="620000" />
+      <workItem from="1766552752503" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="Updated and fixed Linter YAML">
       <option name="closed" value="true" />
