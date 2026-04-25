@@ -1,5 +1,5 @@
 :root {
-  --bg-image: url("images/bokehbg.jpg");
+  --bg-image: url("images/bokehbgsm.jpg");
   --bg-color: #000;
   --overlay-color: rgb(0 0 0 / 55%);
   --card-bg: rgb(255 255 255 / 10%);
@@ -37,7 +37,6 @@ body {
 
   /* FIX: allow pages taller than 1 viewport to scroll naturally */
   min-height: 100dvh;
-
   padding: 2.5vh 2.5vw;
 
   /* FIX: establish a stacking context so overlay can sit above bg but below content */
@@ -57,14 +56,17 @@ body::before {
 }
 
 /* General responsive images (safety) */
-img { max-width: 100%; height: auto; }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .glass-card {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
+  /* stylelint-disable-next-line property-no-vendor-prefix -- Safari <18 still needs the prefix */
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px); /* Safari */
-
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgb(0 0 0 / 60%);
   color: var(--text-color);
@@ -73,6 +75,7 @@ img { max-width: 100%; height: auto; }
   padding: 2rem;
   width: 100%;
   max-width: min(92vw, 64rem);   /* responsive cap */
+
   /* FIX: prevent tiny box + allow reasonable vertical scrolling */
   max-height: min(86dvh, 100%);
   overflow: auto;
@@ -121,7 +124,6 @@ hr {
   /* FIX: let text flow naturally in a readable measure */
   width: 100%;
   max-width: 65ch;
-
   font-size: clamp(0.85rem, 1vw + 0.6vh, 1rem);
 }
 
@@ -162,6 +164,9 @@ footer {
     /* On small screens, allow natural flow instead of centering everything via flex */
     display: block;
     padding: 1rem 0.5rem;
+
+    /* fixed-attachment background can jank on mobile */
+    background-attachment: scroll;
   }
 
   .glass-card {
@@ -173,9 +178,6 @@ footer {
   .subtitle {
     font-size: 0.75rem;
   }
-
-  /* Optional: background-attachment: fixed can jank on mobile */
-  body { background-attachment: scroll; }
 }
 
 @media (max-width: 576px) {
