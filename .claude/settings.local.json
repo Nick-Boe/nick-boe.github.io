@@ -32,7 +32,10 @@
       "Bash(security find-internet-password *)",
       "Bash(git credential-osxkeychain *)",
       "Bash(security dump-keychain *)",
-      "Bash(git fetch *)"
+      "Bash(git fetch *)",
+      "Bash(npx --yes stylelint --config .stylelintrc.json /Users/nb/Desktop/Projects/webdev/nick-boe.github.io/style.css)",
+      "Bash(gh auth *)",
+      "Bash(gh pr create --draft --base master --head ux/polish-pass --title 'UI/UX polish pass + copy refresh + card sizing fix' --body ' *)"
     ]
   }
 }
